@@ -14,7 +14,7 @@ class Course():
         if isinstance(department, Department):
             self.__department = department
         else:
-                raise ValueError("department must be onene of predefined Departments")
+                raise ValueError("department must be one of predefined Departments")
         
         if isinstance(credit_hours, int):
             self.__credit_hours = credit_hours
@@ -23,17 +23,17 @@ class Course():
 
     @property    
     def name(self) -> str:
-         return self.__name
-    
+            return self.__name
+
     @property
     def department(self) -> Department:
-         return self.__department
-    
+            return self.__department
+
     @property
     def credit_hours(self) -> int:
-         return self.__credit_hours
+            return self.__credit_hours
 
     def __str__(self) -> str:
-        return f"Course: {self.__name}" 
-        +f"\nDepartment: {self.__department.name.replace("-", " ").title()}"
-        +f"\nCredit Hours : {self.__credit_hours}"
+        return (f"Course: {self.__name}" 
+        +f"\nDepartment: {self.__department.name.replace("_", " ").title()}"
+        +f"\nCredit Hours: {self.__credit_hours}")
